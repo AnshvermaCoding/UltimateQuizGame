@@ -239,7 +239,7 @@ function btnTwoSettings() {
         modeTwo = "off";
         btn3.style.transform = "translateX(0px)";
         backgroundSound.pause();
-        backgroundSound = backgroundSound.remove();
+      //  backgroundSound = backgroundSound.remove();
         backgroundMusic = "off";
         if(clickSound) {
         clickSound.play();
@@ -249,9 +249,9 @@ function btnTwoSettings() {
         container3.style.backgroundColor = "skyblue";
         modeTwo = "on";
         btn3.style.transform = "translateX(70px)";
-            backgroundSound = document.createElement("audio");
-            backgroundSound.setAttribute("src","Sound Effects/Game Background Music.mp3");
-            backgroundSound.setAttribute("loop","true");
+         //  backgroundSound = document.createElement("audio");
+         //  backgroundSound.setAttribute("src","Sound Effects/Game Background Music.mp3");
+        //   backgroundSound.setAttribute("loop","true");
             backgroundSound.play();
             backgroundMusic = "on";
         if(clickSound) {
