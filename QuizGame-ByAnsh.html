@@ -1359,12 +1359,12 @@ function plusTime() {
    earnPoints.style.visibility = "hidden";
   },1000);
   } else {
-  clearInterval(countdownInterval);
+//  clearInterval(countdownInterval);
     timer.innerText = parseInt(timer.innerText) + 20;
     //localStorage.setItem("time",parseInt(timer.innerText));
     //getTimeInterval();
     timeInterval = parseInt(timeInterval) + 20;
-    startCountdown();
+  //  startCountdown();
     plusTimeVal.innerText = parseInt(plusTimeVal.innerText) - 1;
     plusTimeValue.innerText = parseInt(plusTimeVal.innerText);
     localStorage.setItem("plusTime",parseInt(plusTimeVal.innerText));
