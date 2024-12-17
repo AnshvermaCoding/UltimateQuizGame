@@ -1,0 +1,140 @@
+<html>
+<head>
+  <title>start-page</title>
+  <meta name="viewport" content="user-scalable=no">
+  <link rel="stylesheet" href="quizscss.css">
+</head>
+<body align="center" title="game">
+  <header>
+    <div id="pointValue" class="lyfline" onclick="shop();" class="headerbtns">10</div><div id="pointText" class="lyfline" onclick="shop();" class="headerbtns"> Points</div>
+    <div id="plusContainer" onclick="shop();" class="headerbtns">
+      <div id="plus1"></div>
+        <div id="plus2"></div>
+    </div>
+    <div id="circle" onclick="profile();" class="headerbtns"></div><div id="name" onclick="profile();" class="headerbtns">User</div>
+  </header>
+  <main>
+    <h1 id="heading1">Ultimate Quiz</h1>
+    <div id="container">
+    <div id="start" target="game" onclick="start();">START</div>
+    <div id="option" onclick="option();">OPTIONS</div>
+    <div id="settings" onclick="settings();">SETTINGS</div>
+    <p id="howtoplay" onClick="howToPlay();">How To Play?</p>
+    </div>
+      <div id="instruction">
+       <h2 id="heading2"><u>How To Play</u></h2>
+      <br>
+      <ol type="A">
+        <li>When Start, A question is appear on the screen with multiple choice options below it.</li>
+        <li>Click on the option you believe is correct.</li>
+        <li>Press the "check" button to see if your selected option is correct.</li>
+        <li>If correct, a point is added to the "Correct" box; if wrong, a point is added to the "Wrong" box.</li>
+        <!-- <li>Press the "Skip" button to skip the current question without answering and move to the next one.</li> -->
+        <li>Use lifelines to get hints or remove incorrect options during the quiz.</li>
+        <li>Select your preferred category from the options before starting the quiz.</li>
+        <li>Click the "menu" button for more options.</li>
+        <!--<li>Enter your name and press "ok" to continue.</li>"; -->
+      </ol>
+       <div id="close" onclick="closeInstruction();">Close</div>
+      </div>
+    <section>
+    <div id="aboutus" class="features" onclick="aboutus();">About Us</div><div id="shop" class="features" onclick="shop();">Shop</div>
+    <audio src="Sound Effects/Correct.mp3" id="correct"></audio>
+    <audio src="Sound Effects/Click.mp3" id="click"></audio>
+    <audio src="Sound Effects/Wrong.mp3" id="wrong"></audio>
+    <audio src="Sound Effects/Game Background Music.mp3" id="backgroundMusic" loop></audio>
+    </section>
+    <section>
+      <div id="background"></div>
+    <div id="user" >
+      <h2 id="wlcm_msg1">WELCOME TO</h2>
+      <p id="wlcm_msg2">ULTIMATE QUIZ GAME</p>
+      <input type="text" id="nameinput" placeholder="Enter Your Name" maxlength="7">
+      <button id="continuebtn" onclick="continuebtn();">Continue</button>
+    </div>
+      <h1 id="msg">Enter Your Name</h1>
+    </section>
+    <section>
+      <div id="settingBlock">
+        <h2 id="heading3">SETTINGS</h1>
+        
+        <p class="settingOptions">Sound</p>
+         <label><div class="settingContainer" id="container2">
+         <button id="btn2" class="btns" onclick="btn();"></button>
+         </div></label>
+        
+        <p class="settingOptions">Music</p>
+        <label><div class="settingContainer2" id="container3">
+         <button id="btn3" class="btns1" onclick="btnTwoSettings();"></button>
+         </div></label>
+      
+        <p class="settingOptions">Reset Game</p>
+        <button id="resetBtn" onclick="resetGame();">Reset</button>
+        
+        <button id="close2" onclick="closeSettings();">Close</button>
+      </div>
+    </section>
+    <section>
+      <div id="optionBlock">
+        <h2 id="heading4">OPTIONS</h1>
+        <div id="optionContainer">
+        <p id="option1">Select Difficulty</p>
+        <select id="level">
+          <option>Easy</option>
+          <option>Mediam</option>
+          <option>Hard</option>
+        </select>
+        <p id="option2">Select Category</p>
+        <select id="category">
+          <option>All-Type</option>
+          <option>Comp. Sci</option>
+          <option>Astronomy</option>
+          <option>Technology</option>
+        </select>
+        </div>
+        <button id="close3" onclick="closeOptions();">Close</button>
+      </div>
+    </section>
+    <section>
+      <div id="aboutusBlock">
+        <h2 id="heading5">ABOUT US</h1>
+        <p id="aboutusText">This game is developed by Ansh Verma.</p>
+        <button id="close4" onclick="closeAboutus();">Close</button>
+      </div>
+    </section>
+    <section>
+      <div id="profileBlock">
+        <h2 id="heading6">Your Profile</h1>
+        <div id="namebox"><p class="userdata" id="nameText">Name</p><p id="playerName" class="userdata">user</p></div>
+        <button id="close5" onclick="closeProfile();">Save</button>
+      </div>
+    </section>
+    <section>
+      <div id="shopBlock">
+        <h2 id="heading7">SHOP</h1>
+        <div id="box1" class="boxes"><p id="pointText" class="ValuesText">Points : </p><p id="pointVal" class="values">0</p></div>
+        <div id="box2" class="boxes"><p id="lifelineText" class="ValuesText">Lifeline : </p><p id="lifelineValue" class="values">0</p></div>
+        <div id="box3" class="boxes"><p id="answerText" class="ValuesText">Answers : </p><p id="answerValue" class="values">0</p></div>
+        <div id="box4" class="boxes"><p id="skipText" class="ValuesText">Skips : </p><p id="skipValue" class="values">0</p></div>
+        <div id="box5" class="boxes"><p id="plusTimeText" class="ValuesText">Plus Time : </p><p id="plusTimeValue" class="values">0</p></div>
+        <hr id="line1">
+        <h2 id="title1" class="titles">Buy Lifelines</h2>
+        <div id="item1" class="items"><p>Lifeline (50-50)</p><p class="price">@2</p><button id="buyLifeline" class="buyButtons" onclick="buyLifeline();">Buy</button></div>
+        <div id="item2" class="items"><p>Show Answers </p><p class="price">@4</p><button id="buyShowAnswers" class="buyButtons" onclick="buyShowAnswers();">Buy</button></div>
+        <!-- <hr> -->
+        <!-- <h2 id="title2" class="titles">Buy Points</h2> -->
+        <!-- <div id="item3" class="items"><p>500 Points</p><p class="price">@500Rs</p><button id="buyPoints" class="buyButtons" onclick="buyPoints();">Buy</button></div> -->
+        <div id="item3" class="items"><p>Skip Question</p><p class="price" id="skipPrice">@4</p><button id="buySkips" class="buyButtons" onclick="buySkips();">Buy</button></div>
+        <div id="item4" class="items"><p>Plus 20sec</p><p class="price" id="plusTimePrice">@2</p><button id="buySkips" class="buyButtons" onclick="addTime();">Buy</button></div>
+        <hr>
+        <button id="close6" onclick="closeShop();">Close</button>
+      </div>
+      <div id="earnPoints">Earn Points</div>
+    </section>
+  <footer>
+    <div id="credit">Developer : Ansh Verma</div>
+  </footer>
+    <script src="quizsjs2.js" defer></script>
+  <script src="quizsjs.js"></script>
+</body>
+</html>
